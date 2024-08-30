@@ -3,4 +3,9 @@ class PostModels {
   final String img;
 
   PostModels({required this.name, required this.img});
+
+
+
+
+
 }
