@@ -10,22 +10,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  // List<PostModels> posts = [];
-  //
-  //
-  // @override
-  // void initState() {
-  //   // TODO: implement initState
-  //   super.initState();
-  //   fetchData();
-  // }
-  //
-  // fetchData() async{
-  //   final  data = await ApiServices.fetchData();
-  //   setState(() {
-  //     posts =data!;
-  //   });
-  // }
+
 
   @override
   Widget build(BuildContext context) {

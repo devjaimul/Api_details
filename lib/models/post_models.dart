@@ -5,7 +5,7 @@ class PostsModel {
   PostsModel({required this.name, required this.img});
 
   factory PostsModel.fromJson(Map<String, dynamic> json,) {
-   return PostsModel(name: json['first_name '], img: json['avatar']);
+   return PostsModel(name: json['first_name'], img: json['avatar']);
 
   }
 
