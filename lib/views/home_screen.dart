@@ -1,6 +1,8 @@
 
 import 'package:api/services/api_services.dart';
+import 'package:api/views/post_details.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -27,13 +29,18 @@ class _HomeScreenState extends State<HomeScreen> {
           return ListView.builder(
             itemCount: snapshot.data!.length,
             itemBuilder: (context, index) {
-              return Card(
-                child: ListTile(
-                  leading:
-                      Image(image: NetworkImage(snapshot.data![index].img)),
-                  title: Text(
-                    snapshot.data![index].name,
-                    style: const TextStyle(color: Colors.black),
+              return InkWell(
+                onTap: () {
+                  Get.to(PostDetails(id: snapshot.data![index].id.toString()));
+                },
+                child: Card(
+                  child: ListTile(
+                    leading:
+                        Image(image: NetworkImage(snapshot.data![index].img)),
+                    title: Text(
+                      snapshot.data![index].name,
+                      style: const TextStyle(color: Colors.black),
+                    ),
                   ),
                 ),
               );
