@@ -1,6 +1,7 @@
 
 import 'package:api/services/api_services.dart';
 import 'package:api/views/post_details.dart';
+import 'package:api/views/posts%20create/post_create.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -48,6 +49,9 @@ class _HomeScreenState extends State<HomeScreen> {
           );
         },
       ),
+      floatingActionButton: FloatingActionButton(onPressed: (){
+        Get.to(PostCreate());
+      },child: Icon(Icons.add),),
     );
   }
 }
