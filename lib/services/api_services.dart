@@ -36,7 +36,7 @@ class ApiServices{
       return PostDetailsModel.fromJson(decoded['data']);
     }
     else{
-      print('Error is ${response.body}');
+      print('Error is: ${response.body}');
     }
 }
 
